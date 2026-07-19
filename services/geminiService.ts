@@ -108,3 +108,25 @@ export const getAlternativeActivity = async (
     throw error;
   }
 };
+
+export const replanTripPlan = async (currentPlan: TripPlan, prefs: UserPreferences): Promise<TripPlan> => {
+  try {
+    const response = await fetch('/api/replan-trip', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ currentPlan, prefs }),
+    });
+
+    if (!response.ok) {
+      const errData = await response.json().catch(() => ({}));
+      throw new Error(errData.error || 'Failed to replan trip itinerary');
+    }
+
+    return await response.json() as TripPlan;
+  } catch (error) {
+    console.error("Gemini Replan Error:", error);
+    throw error;
+  }
+};

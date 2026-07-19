@@ -1,0 +1,22 @@
+{
+  "name": "윤우영의 여행일정 AI",
+  "short_name": "여행일정 AI",
+  "description": "여행 DNA와 예산, 동행인 정보를 바탕으로 최적의 여행 코스를 짜주는 AI 초개인화 여행 플래너",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f9fafb",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://img.icons8.com/color/192/travel-luggage.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://img.icons8.com/color/512/travel-luggage.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
